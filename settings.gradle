@@ -1,2 +1,3 @@
 rootProject.name = "The Pedal"
 include ':app'
+include ':core'
