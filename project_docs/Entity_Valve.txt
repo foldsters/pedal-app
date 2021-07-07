@@ -1,0 +1,14 @@
+Valve : Entity
+-----------------------------------------
+
+Data: <proportionOpen>
+
+Does: 
+	1. instance creation :: Double -> Valve
+
+	*When Properly Initialized*
+
+	2. proportionOpen getter :: () -> Double
+	3. proportionOpen setter :: Double -> ()
+
+Don'ts: {1,3} Throw Illegal Args Exception when proportionOpen is outside interval [0, 1]

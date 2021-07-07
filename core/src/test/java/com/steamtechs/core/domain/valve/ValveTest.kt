@@ -1,4 +1,4 @@
-package com.steamtechs.core.domain
+package com.steamtechs.core.domain.valve
 
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.*
@@ -9,34 +9,30 @@ internal class ValveTest {
 
     private lateinit var testValve: Valve
 
-    // Show constructor works
 
-    @Test
+    // Show when constructor passes
+
+    @ParameterizedTest
+    @ValueSource(doubles = doubleArrayOf(0.0, 0.45, 1.0))
     @DisplayName("Instance is of type Valve")
-    fun `Instance is of type Valve`() {
-        testValve = Valve(0, 0.5)
+    fun `Instance is of type Valve`(testProportionOpen: Double) {
+        testValve = Valve(testProportionOpen)
         assertInstanceOf(Valve::class.java, testValve)
     }
 
-    // Show when constructor fails
 
-    @Test
-    @DisplayName("When id is negative constructor fails")
-    fun `Valve constructor fails when id is negative`(){
-        assertThrows<IllegalArgumentException> {
-            Valve(-3, 0.5)
-        }
-    }
+    // Show when constructor fails
 
     @ParameterizedTest
     @ValueSource(doubles = doubleArrayOf(-0.5, 3.0))
     @DisplayName("When proportionOpen is outside the interval [0, 1] constructor fails")
-    fun `When proportionOpen is outside the interval 0, 1 constructor fails`(testPropOpen: Double) {
-        assertThrows<IllegalArgumentException> {
-            Valve(0, testPropOpen)
-        }
-
+    fun `When proportionOpen is outside the interval 0, 1 constructor fails`(testPropOpen: Double)
+        {
+            assertThrows<IllegalArgumentException> {
+                Valve(testPropOpen)
+            }
     }
+
 
     // Show when getters and setters pass/fail
 
@@ -46,22 +42,28 @@ internal class ValveTest {
 
         @BeforeEach
         private fun `When instance is created`(){
-            testValve = Valve(0, 0.5)
+            testValve = Valve(0.5)
         }
 
-        // Show id getters (setters unavailable for id param)
-        @Test
-        @DisplayName("id can be read with getter")
-        fun `id can be read with getter`(){
-            assertEquals(0, testValve.id)
-        }
 
-        // Show proportionOpen getters and setters
+        // Show proportionOpen getters pass
+
         @Test
         @DisplayName("proportionOpen can be read with getter")
         fun `proportionOpen can be read with getter`(){
             assertEquals(0.5, testValve.proportionOpen)
         }
+
+
+        // .. and setters pass/ fail
+
+        @Test
+        @DisplayName("proportionOpen can be updated with setter")
+        fun `proportionOpen can be updated with setter`(){
+            testValve.proportionOpen = 0.25
+            assertEquals(0.25, testValve.proportionOpen)
+        }
+
 
         @ParameterizedTest
         @ValueSource(doubles = doubleArrayOf(-0.5, 3.0))
