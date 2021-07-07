@@ -1,4 +1,4 @@
-package com.steamtechs.core.domain.valve
+package com.steamtechs.core.domain
 
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.*

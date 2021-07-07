@@ -1,4 +1,4 @@
-package com.steamtechs.core.domain.valve
+package com.steamtechs.core.domain
 
 class Valve(proportionOpen: Double) {
 
