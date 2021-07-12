@@ -10,5 +10,5 @@ Does:
 	2. Lets delegated variable be set to a valid value through its setter :: Double -> Double
 
 Don't(s):
-    1. Doesn't let invalid input initialize delegated variable :: Double -> Throws InvalidProportionValueException
-    2. Doesn't let delegated variable be set by invalid value :: Double -> Throws InvalidProportionValueException
+    1. Let invalid input initialize delegated variable :: Double -> Throws InvalidProportionValueException
+    2. Let delegated variable be set by invalid value :: Double -> Throws InvalidProportionValueException
