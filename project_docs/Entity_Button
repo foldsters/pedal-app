@@ -1,0 +1,17 @@
+Button: Entity
+-----------------------------------------------------------
+
+Data:
+    <circuitState Open>:Boolean
+
+
+Does:
+    1. Instance Creation :: Boolean -> Button
+
+    *When Properly Initialized*
+
+    2. circuitState Getter :: () -> Boolean
+    3. circuitState Setter :: Boolean -> ()
+
+
+Don't(s):

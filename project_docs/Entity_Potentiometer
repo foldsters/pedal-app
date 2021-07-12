@@ -1,0 +1,14 @@
+Potentiometer : Entity
+-----------------------------------------
+
+Data: <armatureProportion>: Double
+
+Does:
+	1. instance creation :: Double -> Potentiometer
+
+	*When Properly Initialized*
+
+	2. armatureProportion getter :: () -> Double
+	3. armatureProportion setter :: Double -> ()
+
+Don't(s): {1,3} Throw Illegal Args Exception when armatureProportion is outside interval [0, 1]

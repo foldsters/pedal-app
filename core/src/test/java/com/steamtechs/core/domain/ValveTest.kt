@@ -41,7 +41,7 @@ internal class ValveTest {
     inner class ProperlyInitializedValveTest{
 
         @BeforeEach
-        private fun `When instance is created`(){
+        private fun `When instance is created, `(){
             testValve = Valve(0.5)
         }
 
