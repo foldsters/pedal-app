@@ -1,4 +1,4 @@
-Button: Entity
+Switch: Entity
 -----------------------------------------------------------
 
 Data:
@@ -6,7 +6,7 @@ Data:
 
 
 Does:
-    1. Instance Creation :: Boolean -> Button
+    1. Instance Creation :: Boolean -> Switch
 
     *When Properly Initialized*
 
