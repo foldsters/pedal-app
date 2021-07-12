@@ -1,0 +1,14 @@
+Proportion : Delegate
+-----------------------------------------
+
+Data: Wraps Delegated Variable
+
+* Valid Input means a double value between 0.0 and 1.0 inclusive *
+
+Does:
+	1. Lets valid input initialize delegated variable :: Double -> Double
+	2. Lets delegated variable be set to a valid value through its setter :: Double -> Double
+
+Don't(s):
+    1. Doesn't let invalid input initialize delegated variable :: Double -> Throws InvalidProportionValueException
+    2. Doesn't let delegated variable be set by invalid value :: Double -> Throws InvalidProportionValueException
