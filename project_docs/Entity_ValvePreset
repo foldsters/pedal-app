@@ -1,8 +1,15 @@
 ValvePreset : Entity
 -------------------------------------------------------
 
-Data:
+Data: <valveWeights> : Map<Valve, Double by Proportion>
 
-Do's:
+Does:
+    1. Create instance :: valveWeights -> ValvePreset
+
+    *Given proper instantiation*
+
+    2. Get preset map :: () -> valveWeights
+    3. Update valveWeights :: Pair<Valve, Proportion> -> ()
 
 Don't(s):
+    1.
