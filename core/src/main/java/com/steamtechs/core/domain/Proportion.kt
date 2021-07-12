@@ -11,9 +11,9 @@ class Proportion(var prop: Double) {
         if (p < 0.0 || p > 1.0) throw InvalidProportionValueException("Proportion value must be between 0.0 and 1.0 inclusive.")
     }
 
-    operator fun getValue(thisRef: Double?, property: KProperty<*>) = prop
+    operator fun getValue(thisRef: Any?, property: KProperty<*>) = prop
 
-    operator fun setValue(thisRef: Double?, property: KProperty<*>, value: Double) {
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: Double) {
         throwIfInvalidValue(value)
         prop = value
     }

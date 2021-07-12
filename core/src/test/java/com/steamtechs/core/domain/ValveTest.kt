@@ -28,7 +28,7 @@ internal class ValveTest {
     @DisplayName("When proportionOpen is outside the interval [0, 1] constructor fails")
     fun `When proportionOpen is outside the interval 0, 1 constructor fails`(testPropOpen: Double)
         {
-            assertThrows<IllegalArgumentException> {
+            assertThrows<Proportion.InvalidProportionValueException> {
                 Valve(testPropOpen)
             }
     }
@@ -69,7 +69,7 @@ internal class ValveTest {
         @ValueSource(doubles = doubleArrayOf(-0.5, 3.0))
         @DisplayName("Setting proportionOpen should be between 0 and 1 inclusive")
         fun `Setting proportionOpen should be between 0 and 1 inclusive`(proportion: Double){
-            assertThrows<IllegalArgumentException> { testValve.proportionOpen = proportion }
+            assertThrows<Proportion.InvalidProportionValueException> { testValve.proportionOpen = proportion }
         }
 
     }

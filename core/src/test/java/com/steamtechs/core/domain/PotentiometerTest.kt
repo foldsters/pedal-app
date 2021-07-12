@@ -23,7 +23,7 @@ internal class PotentiometerTest{
     @ValueSource(doubles = doubleArrayOf(-0.5, 3.0))
     @DisplayName("Instantiation fails when armatureProportion is outside interval [0,1]")
     fun `Instantiation fails when armatureProportion is outside interval 0,1`(testArmatureProportion: Double){
-        assertThrows<IllegalArgumentException> {
+        assertThrows<Proportion.InvalidProportionValueException> {
             Potentiometer(testArmatureProportion)
         }
     }
@@ -57,7 +57,7 @@ internal class PotentiometerTest{
         @Test
         @DisplayName("set armatureProportion fails with is outside interval [0, 1].")
         fun `set armatureProportion fails with is outside interval 0, 1`(){
-            assertThrows<IllegalArgumentException> {
+            assertThrows<Proportion.InvalidProportionValueException> {
                 testPotentiometer.armatureProportion = 3.4
             }
         }

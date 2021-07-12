@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions.*
 
 internal class SwitchTest{
 
-    lateinit var testSwitch:Switch
+    lateinit var testSwitch : Switch
 
     
     //Create Instance
