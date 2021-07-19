@@ -1,0 +1,9 @@
+<templateSet group="Kotlin">
+  <template name="utest" value="@Test&#10;@DisplayName(&quot;$testName$&quot;)&#10;fun `$testFunctionName$`(){&#10;    fails()&#10;}" description="Junit5 Unit Test with DisplayName" toReformat="false" toShortenFQNames="true">
+    <variable name="testName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="testFunctionName" expression="substringBefore(testName, &quot;.&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+</templateSet>
