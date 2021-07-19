@@ -12,4 +12,3 @@ Does:
     3. Update valveWeights :: Pair<Valve, Proportion> -> ()
 
 Don't(s):
-    1.
