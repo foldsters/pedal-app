@@ -1,0 +1,11 @@
+UpdateValveProportion - Interactor
+----------------------------------------------------
+Data:
+    Requires Instance of:
+
+
+Does:
+
+    1. Update a given valve's proportion:: Valve -> Proportion -> ()
+
+Don't(s):
