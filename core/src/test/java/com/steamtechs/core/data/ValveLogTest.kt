@@ -1,5 +1,6 @@
 package com.steamtechs.core.data
 
+import com.steamtechs.core.domain.Proportion
 import com.steamtechs.core.domain.Valve
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.*
@@ -21,8 +22,8 @@ internal class ValveLogTest{
     inner class GivenValveLogInstance{
 
         lateinit var testValveLog : ValveLog
-        val valve1 = Valve(0.1)
-        val valve2 = Valve(0.45)
+        val valve1 = Valve(Proportion(0.1))
+        val valve2 = Valve(Proportion(0.45))
 
         @BeforeEach
         fun `Create ValveLog Instance`(){

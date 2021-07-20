@@ -1,7 +1,7 @@
 package com.steamtechs.core.domain
 
-class Potentiometer(armatureProportion: Double) {
+class Potentiometer(armatureProportion: Proportion) {
 
-    var armatureProportion : Double by Proportion(armatureProportion)
+    var armatureProportion = armatureProportion.verify()
 
 }

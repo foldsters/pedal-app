@@ -1,7 +1,7 @@
 package com.steamtechs.core.domain
 
-class Valve(proportionOpen: Double) {
+class Valve(proportionOpen: Proportion) {
 
-    var proportionOpen : Double by Proportion(proportionOpen)
+    var proportionOpen = proportionOpen.verify()
 
 }

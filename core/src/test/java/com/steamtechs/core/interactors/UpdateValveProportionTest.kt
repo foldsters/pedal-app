@@ -14,10 +14,10 @@ internal class UpdateValveProportionTest{
     @Test
     @DisplayName("Update Valve")
     fun `Update Valve`(){
-        testValve = Valve(0.58)
+        testValve = Valve(Proportion(0.58))
         val valveUpdater = UpdateValveProportion()
         valveUpdater(testValve,testProp)
-        assertEquals(testProp.prop, testValve.proportionOpen)
+        assertEquals(testProp.value, testValve.proportionOpen)
     }
 
 

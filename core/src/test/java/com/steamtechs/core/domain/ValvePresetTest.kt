@@ -18,7 +18,7 @@ internal class ValvePresetTest{
     @Test
     @DisplayName("Create new ValvePreset.")
     fun `Create new ValvePreset`(){
-        val valve1 = Valve(0.5)
+        val valve1 = Valve(Proportion(0.5))
         testValvePreset = ValvePreset(mapOf(valve1 to Proportion(0.4)))
         assertInstanceOf(ValvePreset::class.java, testValvePreset)
     }
@@ -30,7 +30,7 @@ internal class ValvePresetTest{
 
         @BeforeEach
         private fun `Given properly initiated ValvePreset`() {
-            valve1 = Valve(0.5)
+            valve1 = Valve(Proportion(0.5))
             testValvePreset = ValvePreset(mapOf(valve1 to Proportion(0.4)))
         }
 
@@ -38,7 +38,7 @@ internal class ValvePresetTest{
         @Test
         @DisplayName("get presetMap.")
         fun `get presetMap`(){
-            assertEquals(mapOf(valve1 to 0.4), testValvePreset.presetMap)
+            assertEquals(mapOf(valve1 to Proportion(0.4)), testValvePreset.presetMap)
         }
 
         //Show Setter Pass/Fail

@@ -8,6 +8,7 @@ Data: Wraps Delegated Variable
 Does:
 	1. Lets valid input initialize delegated variable :: Double -> Double
 	2. Lets delegated variable be set to a valid value through its setter :: Double -> Double
+	3. Returns true under equality if two proportions have the same value, false otherwise :: Proportion -> Proportion -> Bool
 
 Don't(s):
     1. Let invalid input initialize delegated variable :: Double -> Throws InvalidProportionValueException

@@ -16,7 +16,7 @@ internal class ValveTest {
     @ValueSource(doubles = doubleArrayOf(0.0, 0.45, 1.0))
     @DisplayName("Instance is of type Valve")
     fun `Instance is of type Valve`(testProportionOpen: Double) {
-        testValve = Valve(testProportionOpen)
+        testValve = Valve(Proportion(testProportionOpen))
         assertInstanceOf(Valve::class.java, testValve)
     }
 
@@ -29,7 +29,7 @@ internal class ValveTest {
     fun `When proportionOpen is outside the interval 0, 1 constructor fails`(testPropOpen: Double)
         {
             assertThrows<Proportion.InvalidProportionValueException> {
-                Valve(testPropOpen)
+                Valve(Proportion(testPropOpen))
             }
     }
 
@@ -42,7 +42,7 @@ internal class ValveTest {
 
         @BeforeEach
         private fun `When instance is created, `(){
-            testValve = Valve(0.5)
+            testValve = Valve(Proportion(0.5))
         }
 
 
@@ -51,7 +51,7 @@ internal class ValveTest {
         @Test
         @DisplayName("proportionOpen can be read with getter")
         fun `proportionOpen can be read with getter`(){
-            assertEquals(0.5, testValve.proportionOpen)
+            assertEquals(Proportion(0.5), testValve.proportionOpen)
         }
 
 
@@ -60,8 +60,8 @@ internal class ValveTest {
         @Test
         @DisplayName("proportionOpen can be updated with setter")
         fun `proportionOpen can be updated with setter`(){
-            testValve.proportionOpen = 0.25
-            assertEquals(0.25, testValve.proportionOpen)
+            testValve.proportionOpen = Proportion(0.25)
+            assertEquals(Proportion(0.25), testValve.proportionOpen)
         }
 
 
@@ -69,7 +69,7 @@ internal class ValveTest {
         @ValueSource(doubles = doubleArrayOf(-0.5, 3.0))
         @DisplayName("Setting proportionOpen should be between 0 and 1 inclusive")
         fun `Setting proportionOpen should be between 0 and 1 inclusive`(proportion: Double){
-            assertThrows<Proportion.InvalidProportionValueException> { testValve.proportionOpen = proportion }
+            assertThrows<Proportion.InvalidProportionValueException> { testValve.proportionOpen = Proportion(proportion) }
         }
 
     }
