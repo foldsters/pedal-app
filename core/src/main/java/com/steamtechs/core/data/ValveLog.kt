@@ -1,6 +1,6 @@
 package com.steamtechs.core.data
 
-import com.steamtechs.core.domain.Valve
+import com.steamtechs.core.domain.physical.Valve
 import java.security.InvalidKeyException
 
 class ValveLog {

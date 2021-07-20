@@ -1,4 +1,4 @@
-package com.steamtechs.core.domain
+package com.steamtechs.core.domain.physical
 
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.*
