@@ -1,0 +1,16 @@
+ComponentInfo : Interface
+-----------------------------------------------------------
+
+Data:
+    1.  <Manufacturer> : String
+    2.  <Supplier> : String
+    3.  <Part Number> : String
+
+
+Does:
+    1.
+    2.
+    3.
+
+
+Don't(s):
