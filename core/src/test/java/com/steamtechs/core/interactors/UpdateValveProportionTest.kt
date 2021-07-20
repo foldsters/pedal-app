@@ -17,7 +17,7 @@ internal class UpdateValveProportionTest{
         testValve = Valve(Proportion(0.58))
         val valveUpdater = UpdateValveProportion()
         valveUpdater(testValve,testProp)
-        assertEquals(testProp.value, testValve.proportionOpen)
+        assertEquals(testProp, testValve.proportionOpen)
     }
 
 
