@@ -1,7 +1,7 @@
-Proportion : Delegate
+Proportion : Entity
 -----------------------------------------
 
-Data: Wraps Delegated Variable
+Data: Wraps Double Variable
 
 * Valid Input means a double value between 0.0 and 1.0 inclusive *
 

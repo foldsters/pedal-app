@@ -1,5 +1,6 @@
-package com.steamtechs.core.domain
+package com.steamtechs.core.domain.intangible
 
+import com.steamtechs.core.domain.physical.Valve
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName

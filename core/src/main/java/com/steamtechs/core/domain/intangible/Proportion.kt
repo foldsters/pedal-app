@@ -1,6 +1,5 @@
-package com.steamtechs.core.domain
+package com.steamtechs.core.domain.intangible
 
-import java.lang.module.InvalidModuleDescriptorException
 import kotlin.reflect.KProperty
 
 class Proportion(value: Double) {

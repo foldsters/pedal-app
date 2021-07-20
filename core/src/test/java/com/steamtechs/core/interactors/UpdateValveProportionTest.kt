@@ -1,7 +1,7 @@
 package com.steamtechs.core.interactors
 
-import com.steamtechs.core.domain.Proportion
-import com.steamtechs.core.domain.Valve
+import com.steamtechs.core.domain.intangible.Proportion
+import com.steamtechs.core.domain.physical.Valve
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
