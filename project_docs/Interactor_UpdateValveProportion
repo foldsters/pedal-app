@@ -2,7 +2,7 @@ UpdateValveProportion - Interactor
 ----------------------------------------------------
 Data:
     Requires Instance of:
-
+    1. Entity - Valve
 
 Does:
 
