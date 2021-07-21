@@ -9,7 +9,7 @@ class ValveLog {
     var length: Int = 0
     private var idCounter : Int = 0
 
-    private val valveMap : MutableMap<Int, RealValve> = mutableMapOf()
+    val valveMap : MutableMap<Int, RealValve> = mutableMapOf()
 
     fun addValve(realValve : RealValve) : Int {
         if (realValve in valveMap.values) {

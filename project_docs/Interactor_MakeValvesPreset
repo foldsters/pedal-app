@@ -1,0 +1,9 @@
+MakeValvesPreset - Interactor
+__________________________________________________
+
+Data:
+
+Does:
+    1. Create Valves Preset from valveLog :: ValveLog -> ValvesPreset
+
+Don't(s):
