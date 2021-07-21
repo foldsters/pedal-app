@@ -1,0 +1,15 @@
+ValvesPreset : Entity
+-----------------------------------------------------------
+
+Data:
+    <presetMap<valveID, proportionOpen>> :: MutableMap<Int, Proportion>
+
+
+Does:
+    1. Creates a Blank instance :: () -> ValvesPreset
+    2. Getter returns presetMap :: () -> MutableMap<Int, Proportion>
+    3. Setter updates Entire presetMap :: MutableMap<Int, Proportion> -> ()
+
+
+Don't(s):
+    

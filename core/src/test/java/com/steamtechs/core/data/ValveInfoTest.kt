@@ -44,6 +44,7 @@ internal class ValveInfoTest {
         @Test
         @DisplayName("set Manufacturer with only invalid chars.")
         fun `set Manufacturer with only invalid chars`() {
+
             assertThrows<Exception>{testValveInfo.manufacturer = """$$\\"""}
         }
 
