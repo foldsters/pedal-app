@@ -77,6 +77,23 @@ internal class ValveLogTest{
             val valveID2 : Int = testValveLog.addValve(valve2)
             assertNotEquals(valveID1, valveID2)
         }
+        
+        //Checks to see if an ID is contained in the valveLog
+        
+        @Test
+        @DisplayName("can check if it contains an ID.")
+        fun `can check if it contains an ID`() {
+            val valveID1 : Int = testValveLog.addValve(valve1)
+            assertEquals(true, testValveLog.containsID(valveID1))
+        }
+
+        @Test
+        @DisplayName("can check if it doesn't contain an ID.")
+        fun `can check if it doesn't contain an ID`() {
+            assertEquals(false, testValveLog.containsID(-1))
+        }
+
+        // With valves in the valve log
 
         @Nested
         @DisplayName("populated with two valves, ")
@@ -123,6 +140,17 @@ internal class ValveLogTest{
                 assertThrows<InvalidKeyException> {
                     testValveLog.getValve(valveID1)
                 }
+            }
+
+            @Test
+            @DisplayName("valveID should never be returned more than once.")
+            fun `valveID should never be returned more than once`() {
+                testValveLog.removeValve(valveID1)
+                val valveID3 = testValveLog.addValve(RealValve(Valve(Proportion(0.0)), ValveInfo()))
+                assertAll(
+                    { assertNotEquals(valveID1, valveID3) },
+                    { assertNotEquals(valveID2, valveID3) }
+                )
             }
 
         }
