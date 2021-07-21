@@ -40,6 +40,21 @@ internal class MakeRealValveTest {
             assertEquals(0,MakeRealValve(valveLog))
         }
 
+        @Test
+        @DisplayName("add a RealValve to pre-populated ValveLog.")
+        fun `add a RealValve to pre-populated ValveLog`() {
+            val realValve1 = RealValve(Valve(Proportion(0.23)), ValveInfo())
+            val realValve2 = RealValve(Valve(Proportion(0.345)), ValveInfo())
+            val realValve3 = RealValve(Valve(Proportion(0.987)), ValveInfo())
+
+            valveLog.addValve(realValve1)
+            valveLog.addValve(realValve2)
+            valveLog.addValve(realValve3)
+
+
+            assertEquals(3, MakeRealValve(valveLog))
+        }
+
 
 
     }
