@@ -1,11 +1,8 @@
 UpdateValveProportion - Interactor
 ----------------------------------------------------
 Data:
-    Requires Instance of:
-    1. Entity - Valve
 
 Does:
-
     1. Update a given valve's proportion:: Valve -> Proportion -> ()
 
 Don't(s):
