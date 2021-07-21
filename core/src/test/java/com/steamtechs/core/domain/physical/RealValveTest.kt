@@ -14,6 +14,7 @@ internal class RealValveTest {
     val testValve : Valve = Valve(Proportion(0.6))
     val testValveInfo : ValveInfo = ValveInfo()
 
+    //Create Blank Instance
     @Test
     @DisplayName("Create Instance.")
     fun `Create Instance`() {
@@ -21,6 +22,7 @@ internal class RealValveTest {
         assertInstanceOf(RealValve::class.java, testRealValve)
     }
 
+    //With created instance:
     @Nested
     @DisplayName("Given instantiated instance,")
     inner class GivenInstantiatedRealValve() {
@@ -29,6 +31,8 @@ internal class RealValveTest {
         fun `Create RealValveInstance`() {
             testRealValve = RealValve(testValve, testValveInfo)
         }
+
+        // Show getters on instance
 
         @Test
         @DisplayName("get dynamicValve from Instance.")
@@ -43,6 +47,8 @@ internal class RealValveTest {
             assertEquals(testValveInfo, testRealValve.valveInfo)
 
         }
+
+        // Show properties of the attributes can be updated when appropriate
 
         @Test
         @DisplayName("update dynamicValve proportion.")
