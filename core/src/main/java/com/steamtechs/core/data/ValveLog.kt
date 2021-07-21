@@ -30,5 +30,9 @@ class ValveLog {
         length--
     }
 
+    fun containsID(valveId: Int) : Boolean {
+        return valveMap.containsKey(valveId)
+    }
+
 
 }

@@ -142,6 +142,17 @@ internal class ValveLogTest{
                 }
             }
 
+            @Test
+            @DisplayName("valveID should never be returned more than once.")
+            fun `valveID should never be returned more than once`() {
+                testValveLog.removeValve(valveID1)
+                val valveID3 = testValveLog.addValve(RealValve(Valve(Proportion(0.0)), ValveInfo()))
+                assertAll(
+                    { assertNotEquals(valveID1, valveID3) },
+                    { assertNotEquals(valveID2, valveID3) }
+                )
+            }
+
         }
     }
 }

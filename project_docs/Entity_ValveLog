@@ -7,9 +7,10 @@ Data:
 Does:
     1. Create ValveLog instance :: () -> ValveLog
     2. Return current ValveLog length :: () -> Int
-    3. Add Valve instance to log :: Valve -> Int
+    3. Add Valve instance to log and return a unique ID :: Valve -> Int
     4. Given Id Returns a Valve :: Int -> Valve
     5. Remove Valve instance from log :: Int -> ()
+    6. Checks to see if an ID is in the valve log :: Int -> Bool
 
 Don't(s):
     1. {3} Add currently logged valve twice -> InvalidKeyException
