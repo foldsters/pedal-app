@@ -1,0 +1,16 @@
+RealValve : Entity
+-----------------------------------------------------------
+
+Data:
+    1. dynamicValve :: Valve
+    2. valveInfo :: ValveInfo
+
+
+Does:
+    1. Create Instance :: (Valve, ValveInfo) -> RealValve
+    2. Getters for Attributes :: () -> *
+    3. Allow updating attribute properties when appropriate (Should only be done via interactors)
+
+
+Don't(s):
+    1. Allow resetting attributes
