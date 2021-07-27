@@ -29,6 +29,6 @@ internal class MakeValvesPresetTest {
         valveLog.addValve(realValve2)
         valveLog.addValve(realValve3)
         assertInstanceOf(ValvesPreset::class.java,MakeValvesPreset(valveLog))
-        print(MakeValvesPreset(valveLog).presetMap)
+        print(MakeValvesPreset(valveLog).valvesMap)
     }
 }

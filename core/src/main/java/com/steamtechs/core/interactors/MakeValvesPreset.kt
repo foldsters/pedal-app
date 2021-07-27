@@ -9,7 +9,7 @@ object MakeValvesPreset {
         val startProportion = Proportion(0.0)
         val workingPreset = ValvesPreset()
         for (key in valveLog.valveMap.keys) {
-            workingPreset.presetMap[key] = startProportion
+            workingPreset.valvesMap[key] = startProportion
         }
         return workingPreset
     }

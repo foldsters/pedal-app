@@ -1,0 +1,16 @@
+ValvesPresetLog : Entity
+-----------------------------------------------------------
+
+Data:
+    <valvesPresetMap<valvesPresetID, valvesPreset> : MutableMap<Int, ValvesPreset>
+
+
+Does:
+    1. Create ValvesPresetLog instance :: () -> ValvesPresetLog
+    2. Getter takes a ValvesPresetID and returns a ValvesPreset :: Int -> ValvesPreset
+    3. Add ValvesPreset instance to log and return a unique ID :: ValvesPreset -> Int
+    4. Remove ValvesPreset instance from log :: Int -> ()
+
+Don't(s):
+    1. {2} Get ValvesPreset that doesn't exist -> InvalidKeyException
+    2. {4} Remove ValvesPreset that doesn't exist -> InvalidKeyException

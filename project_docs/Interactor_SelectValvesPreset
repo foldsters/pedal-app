@@ -1,0 +1,12 @@
+SelectValvesPreset : Interactor
+-----------------------------------------------------------
+
+Data:
+
+
+
+Does:
+    1. Update ValveLog for a given ValvesPreset :: ValvesPreset, ValveLog -> ()
+
+
+Don't(s):

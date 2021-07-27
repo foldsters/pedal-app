@@ -2,7 +2,7 @@ ValveLog - Entity
 ----------------------------------------
 
 Data:
-    <Map<id, Valve>> : <Int, Valve>
+    <Map<id, Valve>> : MutableMap<Int, Valve>
 
 Does:
     1. Create ValveLog instance :: () -> ValveLog

@@ -4,7 +4,7 @@ import com.steamtechs.core.domain.intangible.Proportion
 import com.steamtechs.core.domain.physical.Valve
 
 class ValvesPreset() {
-    var presetMap = mutableMapOf<Int, Proportion>()
+    var valvesMap = mutableMapOf<Int, Proportion>()
 
 
 }

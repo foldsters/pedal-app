@@ -1,6 +1,5 @@
 package com.steamtechs.core.domain.intangible
 
-import com.steamtechs.core.domain.physical.Valve
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
@@ -29,13 +28,13 @@ internal class ValvesPresetTest{
         @Test
         @DisplayName("getter returns MutableMap.")
         fun `getter returns MutableMap`() {
-            assertInstanceOf(MutableMap::class.java, preset.presetMap)
+            assertInstanceOf(MutableMap::class.java, preset.valvesMap)
         }
 
         @Test
         @DisplayName("getter returns Blank Map before being updated.")
         fun `getter returns Blank Map before being updated`() {
-            assertEquals(mutableMapOf<Int, Proportion>(), preset.presetMap)
+            assertEquals(mutableMapOf<Int, Proportion>(), preset.valvesMap)
         }
 
         @Test
@@ -45,8 +44,8 @@ internal class ValvesPresetTest{
                 Pair(0, Proportion(0.3)), Pair(23, Proportion(0.32)),
                 Pair(5, Proportion(0.6)), Pair(9, Proportion(0.9875))
             )
-            preset.presetMap = newMap
-            assertEquals(newMap, preset.presetMap)
+            preset.valvesMap = newMap
+            assertEquals(newMap, preset.valvesMap)
         }
     }
 }
